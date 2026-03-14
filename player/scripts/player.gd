@@ -11,5 +11,6 @@ func _process(delta: float) -> void:
 	var velocity = direction * speed
 	if direction.length() > 0:
 		position += velocity * delta
+		# teleport signal
 		position.x = clamp(position.x, 0, screen_size.x)
 		position.y = clamp(position.y, 0, screen_size.y)
