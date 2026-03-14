@@ -7,15 +7,19 @@ extends Node2D
 @export var spawn_max_radius: float = 1000
 @export var enemies_count: int = 10
 @export var spawn_interval: float = 2.0
-@export var wait_interval: float = 3.0
+@export var wait_time: float = 3.0
 
 var i = 0
 @onready var enemy_stats = EnemyDataBase.new().ENEMIES[enemy_to_spawn]
 
 func _ready():
+	$Delay.timeout.connect(start_spawning)
+	$Delay.start(wait_time)
+
+func start_spawning():
 	$Timer.wait_time = spawn_interval
 	$Timer.timeout.connect(spawn_enemy)
-	$Timer.start(wait_interval)
+	$Timer.start(spawn_interval)
 
 func spawn_enemy():
 	i += 1

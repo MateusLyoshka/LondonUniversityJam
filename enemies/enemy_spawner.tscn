@@ -5,6 +5,11 @@
 
 [node name="EnemySpawner" type="Node2D"]
 script = ExtResource("1_ewhtn")
+enemy_to_spawn = "enemy_c"
 enemy_scene = ExtResource("2_00s5r")
+spawn_interval = 0.5
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="Delay" type="Timer" parent="."]
