@@ -16,10 +16,12 @@ class EnemyStats:
 		texture = t
 
 var health_stats = {
-	1: EnemyStats.new(1, 30, default_sprite),
-	2: EnemyStats.new(2, 50, default_sprite)
+	1: EnemyStats.new(1, 1, default_sprite),
+	2: EnemyStats.new(2, 1.5, default_sprite),
+	3: EnemyStats.new(3, 2, default_sprite),
+	4: EnemyStats.new(4, 3, default_sprite)
 }
-var health = 2
+var health = randi_range(1, 4)
 var currentStat: EnemyStats = EnemyStats.new(1, 50, default_sprite)
 
 # Called when the node enters the scene tree for the first time.
@@ -31,7 +33,7 @@ func _physics_process(delta: float) -> void:
 		return
 		
 	var direction = (target.global_position - global_position).normalized()
-	global_position += direction * ENEMY_BASE_MOVE_SPEED * delta
+	global_position += direction * ENEMY_BASE_MOVE_SPEED * delta * currentStat.speed
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
