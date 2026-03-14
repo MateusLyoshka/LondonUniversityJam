@@ -1,3 +1,22 @@
 [gd_scene format=3 uid="uid://beeocw38yagvr"]
 
-[node name="Teleporter" type="Node2D" unique_id=964713827]
+[ext_resource type="Script" uid="uid://332iv5oconah" path="res://maps/teleporter.gd" id="1_p5uvv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gpvym"]
+size = Vector2(4, 186.5)
+
+[sub_resource type="Texture2DRD" id="Texture2DRD_p5uvv"]
+
+[node name="Teleporter" type="Area2D" unique_id=964713827]
+script = ExtResource("1_p5uvv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=131014319]
+shape = SubResource("RectangleShape2D_gpvym")
+
+[node name="TextureRect" type="TextureRect" parent="CollisionShape2D" unique_id=88869984]
+visible = false
+offset_left = -20.0
+offset_top = -18.0
+offset_right = 20.0
+offset_bottom = 22.0
+texture = SubResource("Texture2DRD_p5uvv")
