@@ -24,8 +24,7 @@ var currentStat: EnemyStats = EnemyStats.new(1, 50, default_sprite)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	currentStat = health_stats[health]
-	updateSprite()
+	update_stat()
 
 func _physics_process(delta: float) -> void:
 	if target == null:		
@@ -38,5 +37,18 @@ func _physics_process(delta: float) -> void:
 func _process(delta: float) -> void:
 	pass
 
-func updateSprite() -> void:
+func update_stat() -> void:
+	if health == 0:
+		die()
+	currentStat = health_stats[health]
+	update_sprite()
+
+func update_sprite() -> void:
 	$Sprite2D.texture = currentStat.texture
+	
+func take_hit() -> void:
+	health -= 1
+	update_stat()
+	
+func die() -> void:
+	queue_free()
