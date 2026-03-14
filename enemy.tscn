@@ -1,8 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://csuokugmdjn"]
+[gd_scene load_steps=3 format=3 uid="uid://csuokugmdjn"]
 
-[ext_resource type="Texture2D" uid="uid://ds228uiadbc3a" path="res://icon.svg" id="1_7k104"]
+[ext_resource type="Script" uid="uid://b5i2aemghinhd" path="res://enemy.gd" id="1_4gyqm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7k104"]
+radius = 62.968246
 
 [node name="Enemy" type="Node2D"]
+script = ExtResource("1_4gyqm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_7k104")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_7k104")
