@@ -18,6 +18,7 @@ func spawn_enemy():
 		return
 
 	var enemy = enemy_scene.instantiate()
+	enemy.target = player
 	var offset = Vector2(randf_range(-100, 100), randf_range(-100, 100))
-	enemy.global_position = global_position + offset
+	enemy.global_position = player.global_position + offset
 	get_tree().current_scene.add_child(enemy)

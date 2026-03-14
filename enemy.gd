@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var ENEMY_BASE_MOVE_SPEED = 10
-@export var target: Sprite2D
+@export var target: Node2D
 
 var default_sprite: Texture2D = load("res://icon.svg")
 
