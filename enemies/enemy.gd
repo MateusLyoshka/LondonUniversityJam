@@ -7,11 +7,12 @@ var current_hp: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$CharacterBody2D/Sprite2D.texture = info.texture	
+	#info = EnemyDataBase.EnemyStat.new("enemie1", 10, 10)
+	$CharacterBody2D/Sprite2D.texture = info.texture
 	current_hp = info.max_hp
 	
 func take_hit() -> void:
-	info.current_hp -= 1
+	current_hp -= 1
 	if current_hp <= 0:
 		die()
 	
