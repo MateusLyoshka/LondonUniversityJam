@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://blvnbuqylxmnv"]
+
+[ext_resource type="Script" uid="uid://btc25fs1pbcd2" path="res://maps/Room.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://beeocw38yagvr" path="res://maps/Teleporter.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bfgvcorpaqx7e" path="res://enemies/enemy_spawner.tscn" id="3_6k7e3"]
+
+[node name="Room" type="Node2D" unique_id=813950635]
+script = ExtResource("1")
+
+[node name="Background" type="ColorRect" parent="." unique_id=813950636]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.1, 0.1, 0.15, 1)
+
+[node name="Room#InfoLabel" type="Label" parent="." unique_id=813950637]
+
+[node name="Room#SpawnPoints" type="Node2D" parent="." unique_id=813950638]
+
+[node name="SpawnPointsCenter" type="Marker2D" parent="." unique_id=813950639]
+
+[node name="SpawnPointsNorth" type="Marker2D" parent="." unique_id=813950640]
+position = Vector2(0, -140)
+
+[node name="SpawnPointsSouth" type="Marker2D" parent="." unique_id=813950641]
+position = Vector2(0, 140)
+
+[node name="SpawnPointsEast" type="Marker2D" parent="." unique_id=813950642]
+position = Vector2(140, 0)
+
+[node name="SpawnPointsWest" type="Marker2D" parent="." unique_id=813950643]
+position = Vector2(-140, 0)
+
+[node name="TeleporterNorth" parent="." unique_id=813950644 instance=ExtResource("2")]
+position = Vector2(0, -140)
+
+[node name="TeleporterSouth" parent="." unique_id=813950645 instance=ExtResource("2")]
+position = Vector2(0, 140)
+
+[node name="TeleporterEast" parent="." unique_id=813950646 instance=ExtResource("2")]
+position = Vector2(140, 0)
+
+[node name="TeleporterWest" parent="." unique_id=813950647 instance=ExtResource("2")]
+position = Vector2(-140, 0)
+
+[node name="EnemySpawner" parent="." unique_id=1574637990 instance=ExtResource("3_6k7e3")]

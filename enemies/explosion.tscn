@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://bri83sry8ctph"]
+
+[ext_resource type="Script" uid="uid://di1gt1o678o5s" path="res://enemies/explosion_animation.gd" id="1_64ibn"]
+
+[sub_resource type="Curve" id="Curve_in16u"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.30924857, 0.8335795), 0.0, 0.0, 0, 0, Vector2(1, 0.7183653), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_64ibn"]
+offsets = PackedFloat32Array(0, 0.19520548, 0.36301368, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0.47788018, 0.47788012, 0.47788012, 0.5803922, 0, 0, 0, 0)
+
+[sub_resource type="Gradient" id="Gradient_ovo5l"]
+colors = PackedColorArray(0.65628535, 0.6562854, 0.6562854, 1, 1, 1, 1, 1)
+
+[node name="Explosion" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 200
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 200.0
+angular_velocity_min = -100.0
+angular_velocity_max = 100.0
+damping_min = 100.0
+damping_max = 200.0
+scale_amount_min = 10.0
+scale_amount_max = 15.0
+scale_amount_curve = SubResource("Curve_in16u")
+color_ramp = SubResource("Gradient_64ibn")
+color_initial_ramp = SubResource("Gradient_ovo5l")
+hue_variation_max = 1.0
+script = ExtResource("1_64ibn")

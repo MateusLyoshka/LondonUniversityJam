@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="LondonGameJam"
-run/main_scene="uid://cn34avor3xu2k"
+run/main_scene="uid://blvnbuqylxmnv"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*uid://chdup0al42xsw"
 
 [dotnet]
 
