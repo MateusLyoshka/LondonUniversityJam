@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dcwrnc8hgffa"]
+
+[ext_resource type="Theme" uid="uid://drby4mdsolho8" path="res://gui/resources/button_theme.tres" id="1_gjhuu"]
+[ext_resource type="Theme" uid="uid://u31x7jfeof47" path="res://gui/resources/title_txt/title_theme.tres" id="2_j4180"]
+
+[node name="Menu" type="Control" unique_id=1167902967]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LB_title" type="RichTextLabel" parent="." unique_id=1224203981]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.0
+offset_top = -150.0
+offset_right = 287.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme = ExtResource("2_j4180")
+bbcode_enabled = true
+text = "[center][wave]Super Particles[/wave][/center]"
+scroll_active = false
+
+[node name="Buttons" type="VBoxContainer" parent="." unique_id=453476298]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = 102.0
+offset_right = 100.0
+offset_bottom = 302.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="BTN_play" type="Button" parent="Buttons" unique_id=958493499]
+layout_mode = 2
+theme = ExtResource("1_gjhuu")
+text = "PLAY"
+
+[node name="BTN_exit" type="Button" parent="Buttons" unique_id=1809550734]
+layout_mode = 2
+theme = ExtResource("1_gjhuu")
+text = "EXIT"

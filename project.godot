@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="LondonGameJam"
-run/main_scene="uid://m0phrx6r4vdw"
+run/main_scene="uid://cf5cwl5nomhuc"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+BusEvent="*uid://3ky2wkambjs6"
 
 [input]
 
@@ -49,3 +53,5 @@ move_down={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+viewport/hdr_2d=true
+environment/defaults/default_clear_color=Color(0.0253638, 0.0253638, 0.025363795, 1)

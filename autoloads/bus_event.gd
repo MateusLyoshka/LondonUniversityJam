@@ -1,0 +1,2 @@
+# BusEvent class
+extends Node

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cf5cwl5nomhuc"]
+
+[ext_resource type="PackedScene" uid="uid://m0phrx6r4vdw" path="res://player/scenes/player.tscn" id="1_f3sb7"]
+[ext_resource type="Texture2D" uid="uid://tkkrurfi7jhu" path="res://player/sprite/player.png" id="2_fj7yv"]
+[ext_resource type="Script" uid="uid://birmxtncq6815" path="res://tests/particle.gd" id="3_tlwt5"]
+
+[sub_resource type="Environment" id="Environment_f3sb7"]
+background_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_strength = 0.7
+glow_bloom = 0.2
+
+[node name="World" type="Node2D" unique_id=289813224]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1642350378]
+environment = SubResource("Environment_f3sb7")
+
+[node name="Player" parent="." unique_id=1927667481 instance=ExtResource("1_f3sb7")]
+position = Vector2(523, 415)
+
+[node name="Sprite2D" parent="Player" index="1" unique_id=486148239]
+self_modulate = Color(1, 0.7647059, 0, 1)
+position = Vector2(0, -0.99999994)
+
+[node name="Particle" type="Sprite2D" parent="Player" unique_id=204552137]
+position = Vector2(-53, 0)
+scale = Vector2(10, 10)
+texture = ExtResource("2_fj7yv")
+script = ExtResource("3_tlwt5")
+
+[editable path="Player"]
