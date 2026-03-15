@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=3 uid="uid://dhgmeu31gxg1n"]
+
+[ext_resource type="Script" uid="uid://dikmesidq1q1i" path="res://effects/bullet.gd" id="1_3khpt"]
+
+[sub_resource type="Curve" id="Curve_dewm2"]
+_data = [Vector2(0.011278182, 0.84074795), 0.0, 1.0356525, 0, 0, Vector2(0.32706767, 0.40070927), 0.0, 0.0, 0, 0, Vector2(1, 0.38394588), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_v875b"]
+curve = SubResource("Curve_dewm2")
+
+[sub_resource type="Curve" id="Curve_5esik"]
+_data = [Vector2(0, 0.50548035), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_dewm2"]
+curve = SubResource("Curve_5esik")
+
+[sub_resource type="Curve" id="Curve_yc7fn"]
+_data = [Vector2(0, 0.09058678), 0.0, 0.0, 0, 0, Vector2(0.12781954, 0.8323662), 3.1584992, 3.1584992, 0, 0, Vector2(0.56766915, 0.3294649), 0.0, 0.0, 0, 0, Vector2(1, 0.29593813), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_gksjg"]
+curve = SubResource("Curve_yc7fn")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vo7to"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 10.0
+angle_min = -179.99998
+angle_max = 180.00002
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -2.2351742e-06
+linear_accel_max = -2.2351742e-06
+radial_accel_curve = SubResource("CurveTexture_dewm2")
+damping_min = 20.0
+damping_max = 20.0
+scale_min = 3.0
+scale_max = 5.0
+scale_curve = SubResource("CurveTexture_gksjg")
+alpha_curve = SubResource("CurveTexture_v875b")
+
+[node name="PlayerTrail" type="GPUParticles2D"]
+amount = 30
+process_material = SubResource("ParticleProcessMaterial_vo7to")
+script = ExtResource("1_3khpt")

@@ -21,6 +21,10 @@ GameManager="*uid://chdup0al42xsw"
 GUI="*uid://010xo3efl1e"
 BusEvent="*uid://3ky2wkambjs6"
 
+[dotnet]
+
+project/assembly_name="LondonGameJam"
+
 [input]
 
 move_right={

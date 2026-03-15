@@ -8,6 +8,7 @@ extends Node2D
 @export var enemies_count: int = 10
 @export var spawn_interval: float = 2.0
 @export var wait_time: float = 1.0
+@export var color: Color = Color.RED
 
 var spawned := 0
 var enemy_stats
