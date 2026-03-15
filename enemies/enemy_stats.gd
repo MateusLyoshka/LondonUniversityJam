@@ -12,8 +12,8 @@ class EnemyStat:
 		self.name = nm
 
 var ENEMIES := {
-	"enemy_a": EnemyStat.new("a", 3, 1.0),
-	"enemy_b": EnemyStat.new("b", 5, 0.5),
-	"enemy_c": EnemyStat.new("c", 5, 10),
-	"enemy_d": EnemyStat.new("d", 7, 10)
+	"enemy_a": EnemyStat.new("a", 3, 1),
+	"enemy_b": EnemyStat.new("b", 5, 1.2),
+	"enemy_c": EnemyStat.new("c", 5, 1.3),
+	"enemy_d": EnemyStat.new("d", 7, 1.4)
 }

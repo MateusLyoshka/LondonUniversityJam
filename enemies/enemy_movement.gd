@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var ENEMY_BASE_MOVE_SPEED = 300
+@export var ENEMY_BASE_MOVE_SPEED = 200
 
 @onready var stats = get_parent().info
 @onready var target = get_parent().target

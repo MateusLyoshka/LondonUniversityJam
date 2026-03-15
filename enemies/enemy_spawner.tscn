@@ -1,15 +1,14 @@
 [gd_scene format=3 uid="uid://bfgvcorpaqx7e"]
 
 [ext_resource type="Script" uid="uid://opks5lv82cns" path="res://enemies/enemy_spawner.gd" id="1_ewhtn"]
-[ext_resource type="PackedScene" uid="uid://csuokugmdjn" path="res://enemies/enemy.tscn" id="2_00s5r"]
 
 [node name="EnemySpawner" type="Node2D" unique_id=1574637990]
 script = ExtResource("1_ewhtn")
 enemy_to_spawn = "enemy_c"
-enemy_scene = ExtResource("2_00s5r")
 spawn_interval = 0.5
 
 [node name="Timer" type="Timer" parent="." unique_id=553227818]
 wait_time = 0.1
 
 [node name="Delay" type="Timer" parent="." unique_id=936000644]
+one_shot = true
