@@ -14,5 +14,6 @@ class EnemyStat:
 var ENEMIES := {
 	"enemy_a": EnemyStat.new("a", 3, 1.0),
 	"enemy_b": EnemyStat.new("b", 5, 0.5),
-	"enemy_c": EnemyStat.new("b", 5, 50),
+	"enemy_c": EnemyStat.new("c", 5, 10),
+	"enemy_d": EnemyStat.new("d", 7, 10)
 }

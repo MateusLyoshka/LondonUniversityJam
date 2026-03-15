@@ -40,11 +40,12 @@ func align_teleporters() -> void:
 
 func setup_room(data: RoomData) -> void:
 	print("Setting up Room at ", GameManager.current_coords, " with difficulty ", data.difficulty)
-	# 1. Visual changes
-	if data.difficulty > 2:
-		$Background.modulate = Color(0.5, 0, 0)
-	# 2. Configure Teleporters (The "Handshake")
-	# We set: direction (Vector2i) and the name of the marker in the NEXT room
+
+	var map_data = MapData.new()
+	$EnemySpawner.enemy_to_spawn = map_data.difficulty_parameters[data.difficulty]["enemy_to_spawn"]
+	$EnemySpawner.enemies_count = map_data.difficulty_parameters[data.difficulty]["enemies_count"]
+	$EnemySpawner.spawn_interval = map_data.difficulty_parameters[data.difficulty]["spawn_interval"]
+	$EnemySpawner.start()
 
 	# NORTH
 	if data.north_exit != null:
@@ -96,3 +97,5 @@ func spawn_player() -> void:
 		player_instance.global_position = $SpawnPointsCenter.global_position
 		
 	$EnemySpawner.player = player_instance
+	
+	
