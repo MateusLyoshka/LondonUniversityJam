@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dcwrnc8hgffa"]
 
-[ext_resource type="Theme" uid="uid://drby4mdsolho8" path="res://gui/resources/button_theme.tres" id="1_gjhuu"]
+[ext_resource type="Script" uid="uid://b44alm231fyal" path="res://gui/scripts/gui_menu.gd" id="1_cxmfi"]
+[ext_resource type="Theme" uid="uid://drby4mdsolho8" path="res://gui/resources/button/button_theme.tres" id="1_gjhuu"]
 [ext_resource type="Theme" uid="uid://u31x7jfeof47" path="res://gui/resources/title_txt/title_theme.tres" id="2_j4180"]
 
 [node name="Menu" type="Control" unique_id=1167902967]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_cxmfi")
 
 [node name="LB_title" type="RichTextLabel" parent="." unique_id=1224203981]
 layout_mode = 1
@@ -54,3 +56,5 @@ text = "PLAY"
 layout_mode = 2
 theme = ExtResource("1_gjhuu")
 text = "EXIT"
+
+[connection signal="pressed" from="Buttons/BTN_play" to="." method="_on_btn_play_pressed"]
