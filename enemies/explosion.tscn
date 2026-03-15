@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bri83sry8ctph"]
+[gd_scene load_steps=6 format=3 uid="uid://bri83sry8ctph"]
 
 [ext_resource type="Script" uid="uid://di1gt1o678o5s" path="res://enemies/explosion_animation.gd" id="1_64ibn"]
+[ext_resource type="AudioStream" uid="uid://d1r1e6bjasuy1" path="res://sfx/enemy_death.wav" id="2_ovo5l"]
 
 [sub_resource type="Curve" id="Curve_in16u"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.30924857, 0.8335795), 0.0, 0.0, 0, 0, Vector2(1, 0.7183653), 0.0, 0.0, 0, 0]
@@ -35,3 +36,7 @@ color_ramp = SubResource("Gradient_64ibn")
 color_initial_ramp = SubResource("Gradient_ovo5l")
 hue_variation_max = 1.0
 script = ExtResource("1_64ibn")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_ovo5l")
+autoplay = true
