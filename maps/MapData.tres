@@ -1,0 +1,5 @@
+[gd_resource type="MapData" load_steps=2 format=3]
+[ext_resource path="res://maps/MapData.gd" type="Script" id=1]
+
+[resource]
+difficulty_grid = [ [ 1, 1, 2 ], [ 1, 2, 3 ], [ 2, 3, 4 ] ]
