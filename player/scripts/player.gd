@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const DELAY: float = 1
+const DELAY: float = 0.3
 
 @export var speed = 400
 @export var bullet_scene: PackedScene

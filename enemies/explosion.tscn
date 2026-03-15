@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bri83sry8ctph"]
+[gd_scene format=3 uid="uid://bri83sry8ctph"]
 
 [ext_resource type="Script" uid="uid://di1gt1o678o5s" path="res://enemies/explosion_animation.gd" id="1_64ibn"]
 
