@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GUIProperties" format=3 uid="uid://bus5qh0b4j007"]
+
+[ext_resource type="PackedScene" uid="uid://dcwrnc8hgffa" path="res://gui/scenes/menu.tscn" id="1_3dopc"]
+[ext_resource type="PackedScene" uid="uid://cik8mei4w3nul" path="res://gui/scenes/gameplay.tscn" id="2_h06a6"]
+[ext_resource type="Script" uid="uid://i7k8cif7cib3" path="res://gui/scripts/GUIProperties.gd" id="3_2157b"]
+
+[resource]
+script = ExtResource("3_2157b")
+gui_scenes = Array[PackedScene]([ExtResource("1_3dopc"), ExtResource("2_h06a6")])
+metadata/_custom_type_script = "uid://i7k8cif7cib3"

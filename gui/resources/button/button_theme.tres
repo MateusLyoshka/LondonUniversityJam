@@ -1,0 +1,18 @@
+[gd_resource type="Theme" format=3 uid="uid://drby4mdsolho8"]
+
+[ext_resource type="StyleBox" uid="uid://b8vshq5qfatlg" path="res://gui/resources/button/hover.tres" id="1_fl116"]
+[ext_resource type="StyleBox" uid="uid://dpoetr5i0re3l" path="res://gui/resources/button/normal.tres" id="1_fs1pn"]
+[ext_resource type="FontFile" uid="uid://cpofmpk7t82ak" path="res://gui/font/Micro5-Regular.ttf" id="3_u4nuc"]
+
+[resource]
+default_font = ExtResource("3_u4nuc")
+default_font_size = 40
+Button/colors/font_color = Color(0.5803922, 0.7294118, 0, 1)
+Button/colors/font_focus_color = Color(0.9254902, 0.08235294, 0, 1)
+Button/colors/font_hover_color = Color(0.9254902, 0.08235294, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0.9254902, 0.08235294, 0, 1)
+Button/colors/font_pressed_color = Color(0.9254902, 0.08235294, 0, 1)
+Button/styles/focus = ExtResource("1_fl116")
+Button/styles/hover = ExtResource("1_fl116")
+Button/styles/normal = ExtResource("1_fs1pn")
+Button/styles/pressed = ExtResource("1_fl116")

@@ -1,9 +1,12 @@
 extends CharacterBody2D
 
-const DELAY: float = 1
+const DELAY: float = 0.3
 
+@export var props: PlayerProperties
 @export var speed = 400
 @export var bullet_scene: PackedScene
+
+
 var screen_size
 var health = 10
 var shot_delay: float
@@ -35,9 +38,10 @@ func shoot():
 	
 
 func take_damage():
-	health -= 1
-	if health <= 0:
+	props.health -= 1
+	if props.health <= 0:
 		die()
+	BusEvent.player_take_damage.emit(props.health)
 
 func die():
 	print("game over")

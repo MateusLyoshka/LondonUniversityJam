@@ -11,13 +11,15 @@ config_version=5
 [application]
 
 config/name="LondonGameJam"
-run/main_scene="uid://blvnbuqylxmnv"
-config/features=PackedStringArray("4.5", "Forward Plus")
+run/main_scene="uid://dhl8bxy6yjwrn"
+config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameManager="*uid://chdup0al42xsw"
+GUI="*uid://010xo3efl1e"
+BusEvent="*uid://3ky2wkambjs6"
 
 [dotnet]
 
@@ -62,3 +64,5 @@ click={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+viewport/hdr_2d=true
+environment/defaults/default_clear_color=Color(0.0253638, 0.0253638, 0.025363795, 1)
