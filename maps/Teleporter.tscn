@@ -14,9 +14,10 @@ script = ExtResource("1_p5uvv")
 shape = SubResource("RectangleShape2D_gpvym")
 
 [node name="TextureRect" type="TextureRect" parent="CollisionShape2D" unique_id=88869984]
-visible = false
-offset_left = -20.0
-offset_top = -18.0
-offset_right = 20.0
-offset_bottom = 22.0
+offset_left = -3.0
+offset_top = -93.0
+offset_right = 2.0
+offset_bottom = 95.0
 texture = SubResource("Texture2DRD_p5uvv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

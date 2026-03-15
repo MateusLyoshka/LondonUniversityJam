@@ -49,7 +49,7 @@ func change_room(new_coords: Vector2i, spawn_id: String) -> void:
 	target_spawn_id = spawn_id
 	# Reload the MasterRoom scene
 	# This will trigger MasterRoom._ready(), which will then ask for the data
-	get_tree().change_scene_to_file("res://scenes/MasterRoom.tscn")
+	get_tree().change_scene_to_file("res://maps/MasterRoom.tscn")
 	
 func get_current_room_data() -> RoomData:
 	return rooms[current_coords.y][current_coords.x]

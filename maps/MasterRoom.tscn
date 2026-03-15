@@ -6,7 +6,7 @@
 [node name="Room" type="Node2D" unique_id=813950635]
 script = ExtResource("1")
 
-[node name="Room#Background" type="ColorRect" parent="." unique_id=813950636]
+[node name="Background" type="ColorRect" parent="." unique_id=813950636]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
