@@ -5,7 +5,10 @@ var direction = Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	var sfx = AudioStreamPlayer2D.new()
+	sfx.stream = load("res://sfx/player_shoot.wav")
+	get_parent().add_child(sfx)
+	sfx.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

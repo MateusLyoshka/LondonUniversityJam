@@ -45,6 +45,10 @@ func take_damage():
 
 func die():
 	print("game over")
+	var sfx = AudioStreamPlayer2D.new()
+	sfx.stream = load("res://sfx/player_death.wav")
+	get_parent().add_child(sfx)
+	sfx.play()
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
