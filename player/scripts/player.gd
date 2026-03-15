@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
+@export var props: PlayerProperties
 @export var speed = 400
 @export var bullet_scene: PackedScene
 var screen_size
-var health = 10
 
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
@@ -25,9 +25,10 @@ func shoot():
 	get_parent().add_child(bullet)
 
 func take_damage():
-	health -= 1
-	if health <= 0:
+	props.health -= 1
+	if props.health <= 0:
 		die()
+	BusEvent.player_take_damage.emit(props.health)
 
 func die():
 	print("game over")

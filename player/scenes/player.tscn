@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://tkkrurfi7jhu" path="res://player/sprite/player.png" id="1_apn28"]
 [ext_resource type="Script" uid="uid://dvce7gi7vxlpe" path="res://player/scripts/player.gd" id="1_t0cpu"]
 [ext_resource type="PackedScene" uid="uid://b2wypama7m430" path="res://player/scenes/bullet.tscn" id="2_8h4do"]
+[ext_resource type="Resource" uid="uid://bf8vg3c1rqmgq" path="res://player/resources/PlayerProperties.tres" id="2_rclgo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t0cpu"]
 
@@ -10,6 +11,7 @@
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1696037640 groups=["player"]]
 script = ExtResource("1_t0cpu")
+props = ExtResource("2_rclgo")
 bullet_scene = ExtResource("2_8h4do")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2035997097]
