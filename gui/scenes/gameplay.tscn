@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cik8mei4w3nul"]
+
+[ext_resource type="PackedScene" uid="uid://8bbdx1fyklcd" path="res://gui/scenes/gui_life.tscn" id="1_a0dvk"]
+[ext_resource type="Script" uid="uid://brcns2er1nw50" path="res://gui/scripts/life_bar.gd" id="1_uymea"]
+[ext_resource type="Resource" uid="uid://bf8vg3c1rqmgq" path="res://player/resources/PlayerProperties.tres" id="2_xndkc"]
+
+[node name="Gameplay" type="Control" unique_id=917798195]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LifeBar" type="HBoxContainer" parent="." unique_id=1992253908]
+layout_mode = 1
+offset_right = 400.0
+offset_bottom = 40.0
+script = ExtResource("1_uymea")
+player_props = ExtResource("2_xndkc")
+life_scene = ExtResource("1_a0dvk")

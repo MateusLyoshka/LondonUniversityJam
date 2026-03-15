@@ -1,0 +1,11 @@
+[gd_resource type="Theme" format=3 uid="uid://u31x7jfeof47"]
+
+[ext_resource type="FontFile" uid="uid://cpofmpk7t82ak" path="res://gui/font/Micro5-Regular.ttf" id="1_vjmkt"]
+
+[resource]
+default_font = ExtResource("1_vjmkt")
+default_font_size = 100
+RichTextLabel/colors/default_color = Color(0.5803922, 0.7294118, 0, 1)
+RichTextLabel/colors/font_shadow_color = Color(0.6745098, 0, 0, 1)
+RichTextLabel/constants/shadow_offset_x = 0
+RichTextLabel/constants/shadow_offset_y = 5
