@@ -3,11 +3,26 @@
 [ext_resource type="Texture2D" uid="uid://tkkrurfi7jhu" path="res://player/sprite/player.png" id="1_gn47n"]
 [ext_resource type="Script" uid="uid://2d6t1ddmax82" path="res://player/scripts/bullet.gd" id="1_mscsf"]
 
+[sub_resource type="Gradient" id="Gradient_mscsf"]
+offsets = PackedFloat32Array(0, 0.28817734, 0.6625616)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mscsf"]
 size = Vector2(4, 4)
 
 [node name="Bullet" type="Area2D" unique_id=1223986060]
 script = ExtResource("1_mscsf")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1608289310]
+amount = 20
+lifetime = 0.19
+emission_shape = 1
+emission_sphere_radius = 2.0
+spread = 20.0
+gravity = Vector2(0, 0)
+scale_amount_min = 5.0
+scale_amount_max = 10.0
+color_ramp = SubResource("Gradient_mscsf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1843240936]
 shape = SubResource("RectangleShape2D_mscsf")
@@ -16,4 +31,7 @@ shape = SubResource("RectangleShape2D_mscsf")
 scale = Vector2(2, 2)
 texture = ExtResource("1_gn47n")
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1986104483]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
