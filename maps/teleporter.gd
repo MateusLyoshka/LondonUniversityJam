@@ -8,10 +8,9 @@ func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body: Node) -> void:
-	#if not body.is_in_group("player"):
-		#return
-	#if not next_room:
-		#return
+	if not body.is_in_group("player"):
+		return
+
 	print("colliding")
 	var new_coords = GameManager.current_coords + direction
 	GameManager.change_room(new_coords, spawn_id)

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://btc25fs1pbcd2" path="res://maps/Room.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://beeocw38yagvr" path="res://maps/Teleporter.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bfgvcorpaqx7e" path="res://enemies/enemy_spawner.tscn" id="3_6k7e3"]
 
 [node name="Room" type="Node2D" unique_id=813950635]
 script = ExtResource("1")
@@ -41,3 +42,5 @@ position = Vector2(140, 0)
 
 [node name="TeleporterWest" parent="." unique_id=813950647 instance=ExtResource("2")]
 position = Vector2(-140, 0)
+
+[node name="EnemySpawner" parent="." unique_id=1574637990 instance=ExtResource("3_6k7e3")]

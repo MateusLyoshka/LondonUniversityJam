@@ -94,3 +94,5 @@ func spawn_player() -> void:
 	else:
 		# Emergency fallback to center
 		player_instance.global_position = $SpawnPointsCenter.global_position
+		
+	$EnemySpawner.player = player_instance
